@@ -1,3 +1,50 @@
+# Angular NgRx Employee App
+
+An employee listing application built with Angular and NgRx.
+
+## Features
+
+- Fetch employees from REST API
+- NgRx Store and Reducer
+- NgRx Effects for API calls
+- Selectors for employee data
+- Search by name, email, or company
+- Loading and error handling
+- Refresh employee list
+- NgRx Store DevTools
+
+## Tech Stack
+
+- Angular 18
+- TypeScript
+- NgRx Store
+- NgRx Effects
+- HttpClient
+- JSONPlaceholder API
+
+## Setup
+
+Install dependencies:
+
+```bash
+npm install
+npm install @ngrx/store@18 @ngrx/effects@18 @ngrx/store-devtools@18
+```
+
+Start the application:
+
+```bash
+ng serve
+```
+
+Open:
+
+http://localhost:4200
+
+## API
+
+https://jsonplaceholder.typicode.com/users
+
 # AngularNgrxEmployeeApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.

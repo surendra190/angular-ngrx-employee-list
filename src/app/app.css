@@ -1,0 +1,162 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f4f6fb;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 0;
+  color: #64748b;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 16px;
+  color: white;
+  background: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.toolbar input {
+  width: 100%;
+  max-width: 540px;
+  padding: 13px 15px;
+  border: 1px solid #d5dbea;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+}
+
+.count {
+  color: #475569;
+  white-space: nowrap;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.employee-card {
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 5%);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.employee-card h2 {
+  margin: 15px 0 5px;
+  font-size: 20px;
+}
+
+.username {
+  margin: 0 0 18px;
+  color: #64748b;
+}
+
+.details p {
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.details a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.status,
+.error,
+.empty {
+  padding: 20px;
+  margin: 16px 0;
+  border-radius: 10px;
+  background: white;
+}
+
+.error {
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .header,
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+}
